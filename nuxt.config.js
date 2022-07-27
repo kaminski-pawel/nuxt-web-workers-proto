@@ -36,7 +36,7 @@ export default {
    ** Plugins to load before mounting the App
    ** Doc: https://nuxtjs.org/docs/2.x/directory-structure/plugins
    */
-  plugins: [],
+  plugins: [{ src: "~/plugins/inject-web-worker", ssr: false }],
 
   build: {
     extend(config, ctx) {
