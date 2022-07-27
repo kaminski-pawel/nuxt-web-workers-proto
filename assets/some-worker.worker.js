@@ -3,8 +3,10 @@ self.addEventListener("message", (event) => {
   expensiveWork();
 });
 
-function expensiveWork() {
-  setTimeout(() => {
-    self.postMessage("Expensive work on a background thread is done.");
-  }, 2000);
+async function expensiveWork() {
+  for (let i = 1; i < 3; i++) {
+    const resp = await fetch(`https://jsonplaceholder.typicode.com/todos/${i}`);
+    const data = await resp.json();
+    self.postMessage(data);
+  }
 }
