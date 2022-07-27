@@ -12,6 +12,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
-    "nuxt": "^2.15.0"
+    "nuxt": "^2.15.0",
+    "worker-loader": "3.0.8"
   }
 }

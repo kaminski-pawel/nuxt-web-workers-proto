@@ -36,5 +36,17 @@ export default {
    ** Plugins to load before mounting the App
    ** Doc: https://nuxtjs.org/docs/2.x/directory-structure/plugins
    */
-  plugins: []
+  plugins: [],
+
+  build: {
+    extend(config, ctx) {
+      if (ctx.isClient) {
+        config.module.rules.push({
+          test: /\.worker\.js$/,
+          loader: "worker-loader",
+          exclude: /(node_modules)/
+        });
+      }
+    }
+  }
 };
