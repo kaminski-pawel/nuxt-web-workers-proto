@@ -1,26 +1,10 @@
-# codesandbox-nuxt
+# nuxt-web-workers-proto
 
-> Nuxt starter for CodeSandBox (used for https://template.nuxtjs.org)
+Prototyping implementation of Web Workers in the Nuxt SSR application.
 
-## Build Setup
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+See [live demo](https://codesandbox.io/s/github/kaminski-pawel/nuxt-web-workers-proto).
 
 ## Remarks
 
 - solution with `worker-loader` works only with webpack 4
+- currently only web workers and not service workers
